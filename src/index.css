@@ -1,13 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;0,600;0,700;1,700&family=Kenia&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&family=Pattaya&family=Sacramento&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  width: 100%;
+  padding: 0 12px !important;
+  height: 55px;
+  transition:background-color 300ms ease;
+  z-index: 1;
 }
+
+.navbar .container-fluid {
+  height: 100%;
+}
+
+.navbar-brand{
+  height: 100%;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+
+  font-size:40px;
+  font-family: 'Kenia', sans-serif;
+  color: #EFE616 !important;
+  vertical-align: middle;
+}
+
+
+.navbar.active{
+  background-color: #000;
+  opacity: 0.9;
+  box-shadow:rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+
+.navbar-collapse {
+  justify-content: end;
+}
+
+.my-nav.show{
+  background-color: #BE3737;
+}
+
+.my-nav.dont-show{
+  background-color: #fff;
+}
+
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("/icons/menu-fries-white.png") !important;
+
+}
+
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.nav-link {
+  color: #fff !important;
+  margin: 0 0 0 7px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+/* .nav-link:active, .nav-link:focus {
+border-bottom: 3px solid #EFE616;
+} */
+
+
+.nav-link#book-us {
+  background-color: #EFE616;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 8px 23px;
+  color: #000 !important;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.nav-colored{
+  background-color: #fff;
+}
+
+
+@media screen and (max-width: 565px){
+  .navbar.active-mobile, .navbar.active{
+    background-color: #000;
+    opacity: 1;
+  }
+  .nav-link#book-us {
+    color: #000 !important;
+    margin: 0 0 0 7px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-sizing: default;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .nav-link{
+    color: #000 !important;
+    font-weight: 600;
+    border-bottom: 2px solid #D3D3D3;
+    padding: 15px 0 !important;
+  }
+
+  .nav-link.active{
+    border-bottom: 2px solid #000;
+  }
+
+  .navbar-collapse{
+    background-color: #fff;
+    transition: background-color 200ms ease;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .navbar-collapse.collapse{
+    transition: 300ms ease;
+  }
+
+  
+}
+
+
+
+#home{
+  background-color: #f2f2f2;
+}
+
+.landing-page, .landing-page{
+  height: 100vh;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ), url("/images/main/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing-page .wrapper {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.landing-page .title{
+  font-weight: 900;
+  font-size: 34px;
+}
+
+.landing-page .subheading{
+  font-family: 'Sacramento', sans-serif;
+  font-size: 34px;
+}
+
+.landing-page .btn {
+  margin-top: 25px;
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 12px 39px;
+  font-weight: 600;
+  margin: auto;
+}
+
+.scroll-down{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  transform: translateY(calc(-80px)) translateX(-50%) rotate(45deg);
+}
+
+.scroll-down span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  animation: animate 1.5s linear infinite;
+  opacity: 0;
+}
+
+.scroll-down span:nth-child(1) {
+  transform: translate(-15px, -15px);
+  animation-delay: -0.4s;
+}
+
+.scroll-down span:nth-child(2) {
+  transform: translate(0, 0);
+  animation-delay: -0.2s;
+
+}
+
+.scroll-down span:nth-child(3) {
+  transform: translate(15px, 15px);
+  animation-delay: 0s;
+
+}
+
+@keyframes animate {
+  0%{
+    top: -5px;
+    left: -5px;
+    opacity: 0;
+  }
+  25%{
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+  }
+  50%, 100%{
+    top: 5px;
+    left: 5px;
+    opacity: 0;
+  }
+  
+}
+#our-services{
+  margin-top: 40px;
+}
+#our-services .title-row h3{
+  font-family: 'Josefin Sans';
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#our-services h3 span.food{
+  color: #F84444;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#our-services h3 span.service{
+  color: #BE3737;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+#our-services p{
+  width: 95%;
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.1;
+  word-spacing: 1.1px;
+}
+
+
+#our-services .card{
+  border-radius: 0;
+  background-color: #fff !important;
+  height: 500px;
+  width: 350px;
+  padding: 0;
+  margin: 15px auto;
+}
+
+#our-services .card-img-top{
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+#our-services .card-body{
+  height: 50%;
+  border-radius: 0;
+  outline: none;
+  overflow: hidden;
+}
+
+#our-services .card-body h3, .author h3{
+  margin-top: 12px;
+  font-family: 'Sacramento', sans-serif;
+  font-size: 28px;
+  margin-bottom: 0;
+  color: #BE3737;
+  line-height: 0.4;
+}
+
+#our-services .card-body h4, .author h4{
+font-size: 18px;
+font-family: 'Pattaya', sans-serif;
+}
+
+#our-services .card-body p {
+  width: 95%;
+  margin: 0 auto;
+  font-weight: 300;
+  margin-top: 15px;
+  font-size: 15px;
+  line-height: 1.1;
+  word-spacing: 1.1px;
+}
+
+.mySwiper{
+  width: 90%;
+  margin-top: 40px;
+}
+
+.swiper-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.swiper-pagination-bullet {
+  margin: 0px 2px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  display: none !important;
+} 
+
+.swiper-container {
+  z-index: 0;
+}
+/* Media Queries */
+
+@media screen and (min-width: 992px) {
+  .mySwiper{
+    width: 70%;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    display: block !important;
+  } 
+}
+
+
+#about-us{
+  background-color: #fff;
+  width: 100%;
+  padding: 0;
+}
+
+#about-us .author {
+  padding: 25px;
+}
+#about-us .heading {
+  font-family: 'Montserrat';
+  font-weight: 700;
+}
+#about-us img.circular-img {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+}
+
+#about-us .footer-heading p {
+width: 90%;
+margin: 0 auto;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 300;
+font-size: 13px;
+line-height: 113.9%;
+/* or 15px */
+
+text-align: center;
+letter-spacing: -0.035em;
+}
+
+#about-us .footer {
+  background-color: #EFE616;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer h2 {
+  font-family: 'Montserrat';
+  font-weight: 900;
+}
+
+.footer p {
+  font-family: 'Montserrat';
+  font-weight: 600 !important;
+}
+
+.footer .btn{
+  background-color: #000;
+  color: white;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 10px 35px;
+  margin-top: 10px;
+}
+
+.contacts-and-socials {
+  margin-top: 30px;
+}
+
+.footer .contacts{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+}
+
+
+.contacts p, .contacts h4{
+  display: inline;
+  text-align: left !important;
+}
+
+.contacts p {
+  margin-left: 0;
+  margin-bottom: 2px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+}
+.socials .icons{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.socials h4 {
+  display: inline;
+  text-align: left !important;
+}
+
+.map {
+  padding: 0;
+}
+
+.map img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-us .landing-page{
+  height: 50vh;
+}
+
+.contact-us .title{
+  font-family: 'Pattaya';
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.contact-us .scroll-down {
+  position: relative;
+  
+}
+
+
+
