@@ -35,7 +35,7 @@ const Home = () => {
             </div>
             <div className="row mt-4">
                     <div className="card">
-                        <img src={"/images/card1.jpeg"} alt="" className="card-img-top" />
+                        <img src={process.env.PUBLIC_URL+"/images/card1.jpeg"} alt="" className="card-img-top" />
                         <div className="card-body">
                         <h3> Birthda Parties</h3>
                         <h4>From Small Get Togethers to Large Parties</h4>
@@ -43,7 +43,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="card">
-                    <img src={"/images/card2.webp"} alt="" className="card-img-top" />
+                    <img src={process.env.PUBLIC_URL+"/images/card2.webp"} alt="" className="card-img-top" />
                     <div className="card-body">
                     <h3> Birthda Parties</h3>
                     <h4>From Small Get Togethers to Large Parties</h4>
@@ -51,7 +51,7 @@ const Home = () => {
                 </div>
                 </div>      
                     <div className="card">
-                        <img src={"/images/card3.jpg"} alt="" className="card-img-top" />
+                        <img src={process.env.PUBLIC_URL+"/images/card3.jpg"} alt="" className="card-img-top" />
                         <div className="card-body">
                         <h3> Birthda Parties</h3>
                         <h4>From Small Get Togethers to Large Parties</h4>

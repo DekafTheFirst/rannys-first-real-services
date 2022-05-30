@@ -53,10 +53,10 @@ const NavbarComp = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-toggler" onClick={() => {handleNavToggleClick()}}/>
       <Navbar.Collapse id="basic-navbar-nav" className="navbar-collapse collapse">
         <Nav className="nav">
-          <Nav.Link href="rannys-first-real-services/">Home</Nav.Link>
-          <Nav.Link href="rannys-first-real-services/#our-services">Our Services</Nav.Link>
-          <Nav.Link href="rannys-first-real-services/#about-us">About Us</Nav.Link>
-          <Nav.Link href ="rannys-first-real-services/contact-us" id="book-us" className="button">Contact Us</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/#our-services">Our Services</Nav.Link>
+          <Nav.Link href="/#about-us">About Us</Nav.Link>
+          <Nav.Link href ="/contact-us" id="book-us" className="button">Contact Us</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>

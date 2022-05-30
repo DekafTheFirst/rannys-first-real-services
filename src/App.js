@@ -11,8 +11,8 @@ function App() {
       <NavbarComp/>
       <div className="content">
         <Routes>
-          <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/contact-us" element={<ContactUs />}></Route>
+          <Route exact path="/" element={<Home />}/>
+          <Route exact path="/contact-us" element={<ContactUs />}/>
         </Routes> 
       </div>
     </div>
