@@ -2,7 +2,7 @@
   "name": "rannys-first-real-services",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://GamerDTK.github.io/rannys-first-real-services",
+  "homepage": "https://gamerdtk.github.io/rannys-first-real-services/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
