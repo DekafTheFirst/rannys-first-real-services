@@ -14,10 +14,10 @@ const Home = () => {
         <div className="landing-page">
             <div className="wrapper">
                 <h1 className="title">
-                    RANNY'S FIRST REAL SERVICES
+                    Rannys first real services
                 </h1>
-                <h3 className="subheading">We add taste to your event with our menu of different amazing dishes and quality service.<br/>Feel free to.....</h3>
-                <button className="btn btn-light">BOOK US</button>
+                <h3 className="subheading">We add taste to your event with our menu of different amazing dishes And quality service.</h3>
+                <Link to="/contact-us" className="button">BOOK US</Link>
             </div>
             <div className="scroll-down">
                 <span></span>
@@ -94,7 +94,7 @@ const Home = () => {
         <section id="about-us">
             <div className="container-fluid">
                 <div className="row">
-                   <div className="col-12 col-lg-4 author">
+                   <div className="col-12 col-lg-6 author">
                        <h3 className="heading text-dark mb-4">ABOUT US</h3>
 
                        <img src={"/images/ranny kefas, cropped.jpg"} alt="" className="circular-img"/>
@@ -102,7 +102,7 @@ const Home = () => {
                        <h4>The brains behind our amazing catering service</h4>
                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat nunc dapibus, varius enim sed, venenatis sem. Nam auctor tortor faucibus urna cursus aliquet. Aenean eu lorem massa. Sed dapibus vel massa eu ornare.</p>
                    </div>
-                   <div className="col-12 col-lg-4 footer">
+                   <div className="col-12 col-lg-6 footer">
                        <div className="row">
                         <div className="col-12 footer-heading">
                              <h2>RANNY'S FIRST REAL SERVICES</h2>
@@ -131,10 +131,12 @@ const Home = () => {
                              </div>
                          </div>
                        </div>                       
-                   </div>
-                   <div className="col-12 col-lg-4 map">
-                       <img src={"/images/gmap.jpg"} alt="" />
                    </div>                   
+                </div>
+                <div className="row">
+                    <div className="col-12 map">
+                       <img src={"/images/gmap.jpg"} alt="" />
+                    </div>
                 </div>
             </div>
           

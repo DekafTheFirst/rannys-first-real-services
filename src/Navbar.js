@@ -1,51 +1,67 @@
 import React, { useState } from 'react';
-import { Link, NavLink,} from 'react-router-dom';
+import { Nav, Container, Navbar} from 'react-bootstrap';
 
-const Navbar = () => {
+
+
+const NavbarComp = () => {
   const [navbar, setNavbar] = useState(false);
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const [isStillVisible, setIsStillVisible] = useState(true);
 
 
   const changeBackground = () => {
+    console.log(window.screenY);
     if(window.scrollY >= 80){
       setNavbar(true);
     }
     else{
       setNavbar(false);
     }
-    console.log(window.location.href)
+    console.log("background changed")
   }
 
 
-  const makeNavbarDark = () => {
+  const handleNavToggleClick = () => {
     console.log("clicked")
     console.log(isNavExpanded)
     setIsNavExpanded(!isNavExpanded)
+    removeWithTransition()
+  }
+  
+  const removeWithTransition = () => {
+    setIsStillVisible(!isStillVisible)
+    if(isStillVisible === false){
+      console.log("transitions initiated")
+    }
+    else {
+      console.log("still visible")
+    }
   }
 
-  
+  window.addEventListener("resize", () => {
+    if (window.matchMedia("(min-width: 566px)").matches) {
+      setIsNavExpanded(false);
+    }
+  })
 
   window.addEventListener('scroll', changeBackground);
-  return ( <nav className={`navbar navbar-expand-sm navbar-dark ${navbar ? "active" : ""} ${isNavExpanded ? "active active-mobile" : ""}`}>
-    <div className="container-fluid">
-      <Link className="navbar-brand" to="/">R</Link>
-      <button className="navbar-toggler" onClick={() => {makeNavbarDark()}} type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="navbar-collapse" id="navbarNavAltMarkup">
-        <div className="navbar-nav">
-          
-          <NavLink className="nav-link" to="/"><span>HOME</span></NavLink>
-          <a className="nav-link" href="/#our-services"><span>OUR SERVICES</span></a>
-          <a className="nav-link" href="/#about-us"><span>ABOUT US</span></a>
-          <NavLink className="nav-link" to="/contact-us" id="book-us"><span className='center'>BOOK US</span></NavLink>
-        </div>
-      </div>
-    </div>
-    <script>
-      
-    </script>
-  </nav> 
+  return (  
+
+  <Navbar expand="sm" className={`navbar navbar-expand-sm navbar-dark ${navbar ? "active" : ""} ${isNavExpanded ? "active active-mobile active-by-click" : ""}`}>
+    <Container fluid>
+      <Navbar.Brand href="/">R</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-toggler" onClick={() => {handleNavToggleClick()}}/>
+      <Navbar.Collapse id="basic-navbar-nav" className="navbar-collapse collapse">
+        <Nav className="nav">
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/#ourservices">Our Services</Nav.Link>
+          <Nav.Link href="/#about-us">About Us</Nav.Link>
+          <Nav.Link href ="/contact-us" id="book-us" className="button">Contact Us</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
+
   );
 } 
-export default Navbar;
+export default NavbarComp;
