@@ -166,8 +166,8 @@ border-bottom: 3px solid #EFE616;
 .landing-page, .landing-page{
   height: 100vh;
   background-image: linear-gradient(
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.9)
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
   ), url("/images/main/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -318,7 +318,9 @@ border-bottom: 3px solid #EFE616;
   
 }
 #our-services{
-  margin-top: 40px;
+  margin-top: 20px;
+  padding: 55px 0 0 0;
+
 }
 #our-services .title-row h3{
   font-family: 'Josefin Sans';
@@ -430,14 +432,15 @@ font-family: 'Pattaya', sans-serif;
 
 
 #about-us{
-  background-color: #fff;
+  
   width: 100%;
-  padding: 0;
+  padding: 55px 0 0 0;
   margin-top: 40px;
 }
 
 #about-us .author {
-  padding: 25px;
+  padding: 35px;
+  background-color: #fff;
 }
 #about-us .heading {
   font-family: 'Montserrat';
@@ -465,7 +468,7 @@ letter-spacing: -0.035em;
 
 #about-us .footer {
   background-color: #EFE616;
-  padding: 30px;
+  padding: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -539,6 +542,10 @@ letter-spacing: -0.035em;
   position: center;
 }
 
+.contact-us {
+  background-color: #fff;
+}
+
 .contact-us .landing-page{
   height: 50vh;
 }
@@ -554,5 +561,82 @@ letter-spacing: -0.035em;
   
 }
 
+
+form {
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+}
+
+form *{
+  font-size: 12px;
+}
+
+
+
+form .col {
+  justify-content: flex-start;
+  justify-items: flex-start;
+}
+
+form .checkbox-wrap, form .radio-wrap{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+form .radio-wrap label {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+form label{
+  text-align: left;
+  font-size: 12px;
+  padding: 0;
+  width: 100%;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+form label.required {
+  color: #ff0000;
+}
+
+form .checkmark, form .radio-button {
+  margin-right: 4px;
+}
+
+form input[type="text"], form input[type="email"], form input[type="date"], form input[type="number"], .form textarea {
+  background-color:#f2f2f2;
+  border-radius: 20px;
+  border: none;
+  padding: 3px 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+form input[type="submit"]{
+  background-color: #000;
+  color: #fff;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 500px;
+  padding: 10px 32px;
+  font-weight: 700;
+  outline: none;
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+  width: 150px;
+  text-align: center;
+}
+
+form textarea {
+  min-height: 200px;
+}
 
 
