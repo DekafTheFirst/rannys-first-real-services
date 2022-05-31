@@ -77,13 +77,13 @@ const Home = () => {
         autoplay={true}
         className="mySwiper"
         >
-          <SwiperSlide><img src={"/images/main/1.jpg"} alt="" className="swiper-img"/></SwiperSlide>
-          <SwiperSlide><img src={"/images/main/2.jpg"} alt="" className="swiper-img"/></SwiperSlide>
-          <SwiperSlide><img src={"/images/main/4.jpg"} alt="" className="swiper-img"/></SwiperSlide>
-          <SwiperSlide><img src={"/images/main/5.jpg"} alt="" className="swiper-img"/></SwiperSlide>
-          <SwiperSlide><img src={"/images/main/1.jpg"} alt="" className="swiper-img"/></SwiperSlide>
-          <SwiperSlide><img src={"/images/main/7.jpg"} alt="" className="swiper-img"/></SwiperSlide>
-          <SwiperSlide><img src={"/images/main/8.jpg"} alt="" className="swiper-img"/></SwiperSlide>
+          <SwiperSlide><img src={process.env.PUBLIC_URL+"/images/main/1.jpg"} alt="" className="swiper-img"/></SwiperSlide>
+          <SwiperSlide><img src={process.env.PUBLIC_URL+"/images/main/2.jpg"} alt="" className="swiper-img"/></SwiperSlide>
+          <SwiperSlide><img src={process.env.PUBLIC_URL+"/images/main/4.jpg"} alt="" className="swiper-img"/></SwiperSlide>
+          <SwiperSlide><img src={process.env.PUBLIC_URL+"/images/main/5.jpg"} alt="" className="swiper-img"/></SwiperSlide>
+          <SwiperSlide><img src={process.env.PUBLIC_URL+"/images/main/1.jpg"} alt="" className="swiper-img"/></SwiperSlide>
+          <SwiperSlide><img src={process.env.PUBLIC_URL+"/images/main/7.jpg"} alt="" className="swiper-img"/></SwiperSlide>
+          <SwiperSlide><img src={process.env.PUBLIC_URL+"/images/main/8.jpg"} alt="" className="swiper-img"/></SwiperSlide>
           
         </Swiper>
         <div className="my-custom-pagination-div"></div>
@@ -122,10 +122,10 @@ const Home = () => {
                                   <div className="col-6 socials">
                                     <h4>Follow Us</h4>
                                     <div className="icons">
-                                    <img src={"/icons/circle/facebook.png"} alt="" />                                                                      
-                                    <img src={"/icons/circle/instagram.png"} alt="" />                                    
-                                    <img src={"/icons/circle/twitter.png"} alt="" />                                    
-                                    <img src={"/icons/circle/github.png"} alt="" />
+                                    <img src={process.env.PUBLIC_URL+"/icons/circle/facebook.png"} alt="" />                                                                      
+                                    <img src={process.env.PUBLIC_URL+"/icons/circle/instagram.png"} alt="" />                                    
+                                    <img src={process.env.PUBLIC_URL+"/icons/circle/twitter.png"} alt="" />                                    
+                                    <img src={process.env.PUBLIC_URL+"/icons/circle/github.png"} alt="" />
                                     </div>                                
                                  </div>
                              </div>
@@ -135,7 +135,7 @@ const Home = () => {
                 </div>
                 <div className="row">
                     <div className="col-12 map">
-                       <img src={"/images/gmap.jpg"} alt="" />
+                       <img src={process.env.PUBLIC_URL+"/images/gmap.jpg"} alt="" />
                     </div>
                 </div>
             </div>
