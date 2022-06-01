@@ -56,14 +56,13 @@ const Home = () => {
                         <h3> Birthda Parties</h3>
                         <h4>From Small Get Togethers to Large Parties</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat nunc dapibus, varius enim sed, venenatis sem. Nam auctor tortor faucibus urna cursus aliquet. Aenean eu lorem massa. Sed dapibus vel massa eu ornare.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat nunc dapibus, varius enim sed, venenatis sem. Nam auctor tortor faucibus urna cursus aliquet. Aenean eu lorem massa. Sed dapibus vel massa eu ornare.</p>
-
                     </div>
                 </div>                      
             </div>
         </section>
         <section className="swiper">
         <Swiper
+          loop={true}
           spaceBetween={10}
           slidesPerView={3}
           onSlideChange={() => console.log('slide change')}
@@ -95,9 +94,9 @@ const Home = () => {
             <div className="container-fluid">
                 <div className="row">
                    <div className="col-12 col-lg-6 author">
-                       <h3 className="heading text-dark mb-4">ABOUT US</h3>
+                       <h3 className="heading text-dark mb-4">About Us</h3>
 
-                       <img src={"/images/ranny kefas, cropped.jpg"} alt="" className="circular-img"/>
+                       <img src={process.env.PUBLIC_URL+"/images/ranny kefas, cropped.jpg"} alt="" className="circular-img"/>
                        <h3>Meet Ranny</h3>
                        <h4>The brains behind our amazing catering service</h4>
                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat nunc dapibus, varius enim sed, venenatis sem. Nam auctor tortor faucibus urna cursus aliquet. Aenean eu lorem massa. Sed dapibus vel massa eu ornare.</p>
