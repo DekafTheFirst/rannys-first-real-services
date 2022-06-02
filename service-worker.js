@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/rannys-first-real-services/precache-manifest.dbc2bc1b1c6bc5b9064ea0196761921d.js"
+  "/rannys-first-real-services/precache-manifest.aa94a70c3a44f45859a06b5f856386c7.js"
 );
 
 workbox.clientsClaim();
