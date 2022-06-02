@@ -2,15 +2,17 @@ import React from "react";
 import { Swiper, SwiperSlide  } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
-import SwiperCore, {Navigation, Pagination  } from 'swiper';
+import SwiperCore, {Navigation, Pagination, Autoplay  } from 'swiper';
 import { Link } from "react-router-dom";
 import { MdCall, MdEmail } from 'react-icons/md';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const Home = () => {
     return (
     <div id="home">
+    
         <div className="landing-page">
             <div className="wrapper">
                 <h1 className="title">
@@ -65,15 +67,12 @@ const Home = () => {
           loop={true}
           spaceBetween={10}
           slidesPerView={3}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
           pagination={{
             el: '.my-custom-pagination-div',
             clickable: true,
           }}
-          navigation={true}
 
-        autoplay={true}
+          autoplay={{ delay: 3000 }}
         className="mySwiper"
         >
           <SwiperSlide><img src={process.env.PUBLIC_URL+"/images/main/1.jpg"} alt="" className="swiper-img"/></SwiperSlide>
@@ -83,7 +82,6 @@ const Home = () => {
           <SwiperSlide><img src={process.env.PUBLIC_URL+"/images/main/1.jpg"} alt="" className="swiper-img"/></SwiperSlide>
           <SwiperSlide><img src={process.env.PUBLIC_URL+"/images/main/7.jpg"} alt="" className="swiper-img"/></SwiperSlide>
           <SwiperSlide><img src={process.env.PUBLIC_URL+"/images/main/8.jpg"} alt="" className="swiper-img"/></SwiperSlide>
-          
         </Swiper>
         <div className="my-custom-pagination-div"></div>
         <div className="my-prev-nav" />
@@ -138,8 +136,11 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-          
         </section>    
+        <MessengerCustomerChat
+              pageId="109657494753220"
+              appId="1170762717095929"
+            />
         </div>);
 }
  
