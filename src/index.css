@@ -140,29 +140,19 @@ body {
     border-bottom: 2px solid #000 !important;
   }
 
-  .navbar-collapse, .navbar .menu-overlay{
+  .navbar-collapse{
     background-color: #fff;
     transition: none;
     position: absolute;
-
-    top: 55px;
-    
-    
+    top: 55px;    
     height: 100vh;
     margin: auto;
     padding: 30px;
-  }
-
-  .navbar-collapse{
     right: 0;
     width: 70%;
   }
 
-  .navbar .menu-overlay{
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 30%;
-    left: 0;
-  }
+  
   .removed{
     transform: translateX(100vw);
   }

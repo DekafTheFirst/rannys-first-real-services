@@ -5,7 +5,7 @@ import 'swiper/swiper.min.css'
 import SwiperCore, {Navigation, Pagination, Autoplay  } from 'swiper';
 import { Link } from "react-router-dom";
 import { MdCall, MdEmail } from 'react-icons/md';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
+import { MessengerChat } from "react-messenger-chat-plugin";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
@@ -137,10 +137,34 @@ const Home = () => {
                 </div>
             </div>
         </section>    
-        <MessengerCustomerChat
-              pageId="109657494753220"
-              appId="1170762717095929"
-            />
+        <MessengerChat
+    pageId="109657494753220"
+    language="sv_SE"
+    themeColor={"#000000"}
+    bottomSpacing={300}
+    loggedInGreeting="loggedInGreeting"
+    loggedOutGreeting="loggedOutGreeting"
+    greetingDialogDisplay={"show"}
+    debugMode={true}
+    onMessengerShow={() => {
+      console.log("onMessengerShow");
+    }}
+    onMessengerHide={() => {
+      console.log("onMessengerHide");
+    }}
+    onMessengerDialogShow={() => {
+      console.log("onMessengerDialogShow");
+    }}
+    onMessengerDialogHide={() => {
+      console.log("onMessengerDialogHide");
+    }}
+    onMessengerMounted={() => {
+      console.log("onMessengerMounted");
+    }}
+    onMessengerLoad={() => {
+      console.log("onMessengerLoad");
+    }}
+  />
         </div>);
 }
  
