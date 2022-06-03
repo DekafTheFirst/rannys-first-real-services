@@ -16,7 +16,7 @@ const Home = () => {
         <div className="landing-page">
             <div className="wrapper">
                 <h1 className="title">
-                    Rannys first real services
+                    Ranny first real services
                 </h1>
                 <h3 className="subheading">We add taste to your event with our menu of different amazing dishes And quality service.</h3>
                 <Link to="/contact-us" className="button">BOOK US</Link>
@@ -36,28 +36,28 @@ const Home = () => {
                 <p>We offer a wide range of catering services, from drop-off to full-service catering, launch parties to weddings.<br/><br/>Browse our sample menus for mouth-watering ideas for your next event.</p>
             </div>
             <div className="row mt-4">
-                    <div className="card">
-                        <img src={process.env.PUBLIC_URL+"/images/card1.jpeg"} alt="" className="card-img-top" />
-                        <div className="card-body">
-                        <h3> Birthda Parties</h3>
-                        <h4>From Small Get Togethers to Large Parties</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat nunc dapibus, varius enim sed, venenatis sem. Nam auctor tortor faucibus urna cursus aliquet. Aenean eu lorem massa. Sed dapibus vel massa eu ornare.</p>
-                    </div>
+                <div className="card">
+                  <img src={process.env.PUBLIC_URL+"/images/card1.jpeg"} alt="" className="card-img-top" />
+                  <div className="card-body">
+                      <h3> Birthday Parties</h3>
+                      <h4>From Small Get Togethers to Large Parties</h4>
+                      <p>Is your office planning any party</p>
+                      </div>
                 </div>
                 <div className="card">
                     <img src={process.env.PUBLIC_URL+"/images/card2.webp"} alt="" className="card-img-top" />
                     <div className="card-body">
-                    <h3> Birthda Parties</h3>
+                    <h3> Weddings </h3>
                     <h4>From Small Get Togethers to Large Parties</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat nunc dapibus, varius enim sed, venenatis sem. Nam auctor tortor faucibus urna cursus aliquet. Aenean eu lorem massa. Sed dapibus vel massa eu ornare.</p>
-                </div>
+                    <p>Of Food Catering provides full-service wedding catering for your special day. We created two wedding packages to make planning your wedding easier than ever. We guide you through curating the perfect menu for you and your guests. Should you need help with cocktails, desserts, or other aspects of planning your wedding reception, we are a quick phone call away! We are always happy to be of service.</p>
+                    </div>
                 </div>      
-                    <div className="card">
-                        <img src={process.env.PUBLIC_URL+"/images/card3.jpg"} alt="" className="card-img-top" />
-                        <div className="card-body">
-                        <h3> Birthda Parties</h3>
-                        <h4>From Small Get Togethers to Large Parties</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat nunc dapibus, varius enim sed, venenatis sem. Nam auctor tortor faucibus urna cursus aliquet. Aenean eu lorem massa. Sed dapibus vel massa eu ornare.</p>
+                <div className="card">
+                    <img src={process.env.PUBLIC_URL+"/images/card3.jpg"} alt="" className="card-img-top" />
+                    <div className="card-body">
+                    <h3> Coorperate events </h3>
+                    <h4>PICK-UP OR DROP-OFF</h4>
+                    <p></p>
                     </div>
                 </div>                      
             </div>
@@ -97,12 +97,12 @@ const Home = () => {
                        <img src={process.env.PUBLIC_URL+"/images/ranny kefas, cropped.jpg"} alt="" className="circular-img"/>
                        <h3>Meet Ranny</h3>
                        <h4>The brains behind our amazing catering service</h4>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat nunc dapibus, varius enim sed, venenatis sem. Nam auctor tortor faucibus urna cursus aliquet. Aenean eu lorem massa. Sed dapibus vel massa eu ornare.</p>
+                       <p>Ranny K</p>
                    </div>
                    <div className="col-12 col-lg-6 footer">
                        <div className="row">
                         <div className="col-12 footer-heading">
-                             <h2>RANNY'S FIRST REAL SERVICES</h2>
+                             <h2>RANNY FIRST REAL SERVICES</h2>
                              <p>Have An Event Coming Up?</p>
                              <Link to="/contact-us" className="btn">BOOK US</Link>
                          </div>

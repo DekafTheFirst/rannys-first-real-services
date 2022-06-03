@@ -37,7 +37,6 @@ body {
 
 .navbar.active{
   background-color: #000;
-  opacity: 0.9;
   box-shadow:rgba(0, 0, 0, 1);
   z-index: 2;
 }
@@ -397,7 +396,6 @@ border-bottom: 3px solid #EFE616;
 
 #our-services p{
   width: 95%;
-  padding: 0 20px;
   margin: 0 auto;
   font-weight: 300;
   font-size: 15px;
@@ -409,10 +407,17 @@ border-bottom: 3px solid #EFE616;
 #our-services .card{
   border-radius: 0;
   background-color: #fff !important;
-  height: 500px;
-  width: 350px;
+  height: 550px;
+  width: 400px;
   padding: 0;
   margin: 15px auto;
+}
+
+@media screen and (max-width: 400px) {
+  #our-services .card{
+    width: 100%;
+
+  }
 }
 
 #our-services .card-img-top{
@@ -438,16 +443,23 @@ border-bottom: 3px solid #EFE616;
   line-height: 0.4;
 }
 
+#our-services .card-body h4{
+  margin-top: 7px;
+}
+
+
 #our-services .card-body h4, .author h4{
 font-size: 18px;
 font-family: 'Pattaya', sans-serif;
 }
 
 #our-services .card-body p {
-  width: 95%;
-  margin: 0 auto;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 7px;
+  text-align: center;
   font-weight: 300;
-  margin-top: 15px;
   font-size: 15px;
   line-height: 1.1;
   word-spacing: 1.1px;
