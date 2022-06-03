@@ -374,13 +374,13 @@ border-bottom: 3px solid #EFE616;
 #our-services{
   margin-top: 5px;
   padding: 75px 0 0 0;
-
 }
 
 #our-services .title-row h3{
   font-family: 'Josefin Sans';
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 #our-services h3 span.food{

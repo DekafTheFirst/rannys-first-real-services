@@ -139,13 +139,13 @@ const Home = () => {
         </section>    
         <MessengerChat
     pageId="109657494753220"
-    language="sv_SE"
-    themeColor={"#000000"}
+    language="en_US"
+    themeColor={"#EFE616"}
     bottomSpacing={300}
     loggedInGreeting="loggedInGreeting"
     loggedOutGreeting="loggedOutGreeting"
     greetingDialogDisplay={"show"}
-    debugMode={true}
+    debugMode={false}
     onMessengerShow={() => {
       console.log("onMessengerShow");
     }}
