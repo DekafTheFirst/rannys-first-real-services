@@ -41,23 +41,30 @@ const Home = () => {
                   <div className="card-body">
                       <h3> Birthday Parties</h3>
                       <h4>From Small Get Togethers to Large Parties</h4>
-                      <p>Is your office planning any party</p>
+                      <p>Is your special day coming up?</p>
+                      <p>We got you covered, just focus on the other parts and let us handle the food department</p>
+                      <p>Our menu includes a whole lot of amazing dishes, from full meals to small chops and other delicious delicacies</p>
                       </div>
                 </div>
                 <div className="card">
                     <img src={process.env.PUBLIC_URL+"/images/card2.webp"} alt="" className="card-img-top" />
                     <div className="card-body">
                     <h3> Weddings </h3>
-                    <h4>From Small Get Togethers to Large Parties</h4>
-                    <p>Of Food Catering provides full-service wedding catering for your special day. We created two wedding packages to make planning your wedding easier than ever. We guide you through curating the perfect menu for you and your guests. Should you need help with cocktails, desserts, or other aspects of planning your wedding reception, we are a quick phone call away! We are always happy to be of service.</p>
+                    <h4>We cook every meal with love and would love to join you in celebrating yours</h4>
+                    <p>We provide full-service wedding catering for your special day.</p>
+                    <p>We guide you through curating the perfect menu for you and your guests.</p> 
+                    <p>Should you need help with desserts, or other aspects of planning your wedding reception, we are a quick phone call away! </p>
+                    <p>We are always happy to be of service.</p>
                     </div>
                 </div>      
                 <div className="card">
                     <img src={process.env.PUBLIC_URL+"/images/card3.jpg"} alt="" className="card-img-top" />
                     <div className="card-body">
                     <h3> Coorperate events </h3>
-                    <h4>PICK-UP OR DROP-OFF</h4>
-                    <p></p>
+                    <h4>From Small Get Togethers to Large Parties</h4>
+                      <p>Does your office have an upcoming event?</p>
+                      <p>We offer and amazing corprate catering package which includes drop-off, pick-up or even full catering service.</p>
+                      <p>Simply contact us and like magic, large trays of restaurant-quality food will come to you</p>
                     </div>
                 </div>                      
             </div>
@@ -83,6 +90,7 @@ const Home = () => {
           <SwiperSlide><img src={process.env.PUBLIC_URL+"/images/main/7.jpg"} alt="" className="swiper-img"/></SwiperSlide>
           <SwiperSlide><img src={process.env.PUBLIC_URL+"/images/main/8.jpg"} alt="" className="swiper-img"/></SwiperSlide>
         </Swiper>
+
         <div className="my-custom-pagination-div"></div>
         <div className="my-prev-nav" />
         <div className="my-next-nav" />
@@ -97,14 +105,12 @@ const Home = () => {
                        <img src={process.env.PUBLIC_URL+"/images/ranny kefas, cropped.jpg"} alt="" className="circular-img"/>
                        <h3>Meet Ranny</h3>
                        <h4>The brains behind our amazing catering service</h4>
-                       <p>Ranny K</p>
+                       <p>Ranny Kefas, CEO of Ranny First Real Services. She's an amazing cook and does so with passion, putting love in every meal. She's also a mother of 4 amazing children.</p>
                    </div>
                    <div className="col-12 col-lg-6 footer">
                        <div className="row">
                         <div className="col-12 footer-heading">
                              <h2>RANNY FIRST REAL SERVICES</h2>
-                             <p>Have An Event Coming Up?</p>
-                             <Link to="/contact-us" className="btn">BOOK US</Link>
                          </div>
                          <div className="col-12 contacts-and-socials">
                              <div className="row ">
@@ -142,8 +148,8 @@ const Home = () => {
     language="en_US"
     themeColor={"#EFE616"}
     bottomSpacing={20}
-    loggedInGreeting="loggedInGreeting"
-    loggedOutGreeting="loggedOutGreeting"
+    loggedInGreeting="Logged In"
+    loggedOutGreeting="Logged Out"
     greetingDialogDisplay={"show"}
     debugMode={false}
     onMessengerShow={() => {
