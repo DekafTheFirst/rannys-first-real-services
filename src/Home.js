@@ -141,7 +141,7 @@ const Home = () => {
     pageId="109657494753220"
     language="en_US"
     themeColor={"#EFE616"}
-    bottomSpacing={300}
+    bottomSpacing={20}
     loggedInGreeting="loggedInGreeting"
     loggedOutGreeting="loggedOutGreeting"
     greetingDialogDisplay={"show"}
